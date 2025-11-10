@@ -72,31 +72,32 @@
 
 //Зробіть сервіс який отримує число від 1 до 12
 // виведіть місяць який дорівнює числу
-// const months = [
-//   "Нема такого місяця",
-//   "Січень",
-//   "Лютий",
-//   "Березень",
-//   "Квітень",
-//   "Травень",
-//   "Червень",
-//   "Липень",
-//   "Серпень",
-//   "Вересень",
-//   "Жовтень",
-//   "Листопад",
-//   "Грудень",
-// ];
-// function getMonthName(monthNumber) {
-//   if (monthNumber >= 1 && monthNumber <= 12) {
-//     return months[monthNumber];
-//   } else {
-//     return "Некоректний номер місяця";
-//   }
-// }
-// const userMonth = 5;
-// const monthName = getMonthName(userMonth); //виведе травень
-// console.log(monthName);
+const months = [
+  "Нема такого місяця",
+  "Січень",
+  "Лютий",
+  "Березень",
+  "Квітень",
+  "Травень",
+  "Червень",
+  "Липень",
+  "Серпень",
+  "Вересень",
+  "Жовтень",
+  "Листопад",
+  "Грудень",
+];
+
+function getMonthName(monthNumber) {
+  if (monthNumber >= 1 && monthNumber <= 12) {
+    return months[monthNumber];
+  } else {
+    return months[monthNumber - 1] || "Некоректний номер місяця";
+  }
+}
+const userMonth = 5;
+const monthName = getMonthName(userMonth); //виведе травень
+console.log(monthName);
 
 // const userMonth = 14;
 // const monthName = getMonthName(userMonth); //виведе некоректний номер місяця
